@@ -14,8 +14,8 @@ NODEIP=$(curl -s4 icanhazip.com)
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 NC='\033[0m'
-function download_node(){
-echo -e "Prepare to download $COIN_NAME binaries"
+function download_node() {
+  echo -e "Prepare to download $COIN_NAME binaries"
   cd $TMP_FOLDER
   wget -q $COIN_TGZ
   tar xvzf $COIN_ZIP -C /usr/local/bin/
