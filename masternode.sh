@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 TMP_FOLDER=$(mktemp -d)
 CONFIG_FILE='mesteam.conf'
 CONFIGFOLDER='/root/.mesteam'
