@@ -1,6 +1,4 @@
 #!/bin/bash
-
-
 TMP_FOLDER=$(mktemp -d)
 CONFIG_FILE='mesteam.conf'
 CONFIGFOLDER='/root/.mesteam'
@@ -12,15 +10,12 @@ COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 COIN_NAME='mesteam'
 COIN_PORT=40104
 RPC_PORT=40204
-
 NODEIP=$(curl -s4 icanhazip.com)
-
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 NC='\033[0m'
-
 function download_node() {
-  echo -e "Prepare to download $COIN_NAME binaries"
+echo -e "Prepare to download $COIN_NAME binaries"
   cd $TMP_FOLDER
   wget -q $COIN_TGZ
   tar xvzf $COIN_ZIP -C /usr/local/bin/
